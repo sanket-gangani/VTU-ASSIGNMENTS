@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TechStore <span>Inventory Hub</span></h1>
+            <p class="subtitle">E-commerce Product Management & Live Activity Tracking</p>
+        </header>
+
+        <main>
+            <section class="inventory-section">
+                <div class="card-header">
+                    <h2>Store Inventory</h2>
+                    <button id="show-modal-btn" class="btn primary">Add New Product</button>
+                </div>
+                <div id="product-list" class="product-grid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </section>
+
+            <aside class="activity-section">
+                <h2>Real-time History</h2>
+                <div id="activity-log" class="activity-log">
+                    <!-- Activities will be loaded here -->
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn">&times;</span>
+            <h2>Product Details</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="name">Product Name</label>
+                    <input type="text" id="name" placeholder="e.g. iPhone 15 Pro" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Price ($)</label>
+                        <input type="number" id="price" placeholder="99.99" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" required>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Laptops">Laptops</option>
+                            <option value="Smartphones">Smartphones</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Accessories">Accessories</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Specifications & Description</label>
+                    <textarea id="description" placeholder="A brief overview of the product..." required></textarea>
+                </div>
+                <button type="submit" class="btn primary full-width">Add to Catalog</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
