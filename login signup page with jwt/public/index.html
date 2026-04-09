@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System | Premium Access</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <div class="glass-card" id="auth-card">
+            <div class="card-header">
+                <h1 id="form-title">Welcome Back</h1>
+                <p id="form-subtitle">Please enter your details to sign in</p>
+            </div>
+
+            <form id="auth-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div id="message" class="message"></div>
+
+                <button type="submit" id="submit-btn" class="btn-primary">
+                    <span class="btn-text">Sign In</span>
+                    <div class="loader-spinner"></div>
+                </button>
+            </form>
+
+            <div class="card-footer">
+                <p id="toggle-text">Don't have an account? <a href="#" id="toggle-link">Sign up</a></p>
+            </div>
+        </div>
+
+        <div class="glass-card hidden" id="user-dashboard">
+            <div class="card-header">
+                <h1>Hello, <span id="display-username">User</span>!</h1>
+                <p>You have successfully authenticated with JWT and Cookies.</p>
+            </div>
+            <div class="status-badge success">Authenticated</div>
+            <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
