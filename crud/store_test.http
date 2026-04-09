@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5001/api
+
+### Create a Product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "name": "Sony WH-1000XM5",
+    "description": "Industry-leading noise cancellation, 30hr battery, crystal clear hands-free calling",
+    "price": 349.99,
+    "category": "Audio",
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&q=80&w=800"
+}
+
+### Get All Products
+GET {{baseUrl}}/products
+
+### Update Product Stock (Replace ID)
+PUT {{baseUrl}}/products/<PRODUCT_ID>
+Content-Type: application/json
+
+{
+    "inStock": false
+}
+
+### Delete a Product (Replace ID)
+DELETE {{baseUrl}}/products/<PRODUCT_ID>
+
+### Get Activity History
+GET {{baseUrl}}/activities
