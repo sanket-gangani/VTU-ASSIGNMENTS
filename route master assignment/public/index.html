@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Master | Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header class="main-header">
+            <h1>Libri <span>Store</span></h1>
+            <p>Admin Control Panel</p>
+        </header>
+
+        <section class="dashboard-grid">
+            <!-- Authors Section -->
+            <div class="glass-card">
+                <h2>Manage Authors</h2>
+                <form id="author-form" class="compact-form">
+                    <input type="text" id="author-name" placeholder="Author Name" required>
+                    <input type="text" id="author-bio" placeholder="Short Bio">
+                    <button type="submit" class="btn-primary">Add Author</button>
+                </form>
+                <div class="list-container" id="authors-list">
+                    <!-- Authors populated here -->
+                </div>
+            </div>
+
+            <!-- Books Section -->
+            <div class="glass-card">
+                <h2>Manage Books</h2>
+                <form id="book-form" class="compact-form">
+                    <input type="text" id="book-title" placeholder="Book Title" required>
+                    <select id="book-author" required>
+                        <option value="" disabled selected>Select Author</option>
+                    </select>
+                    <div class="row">
+                        <input type="text" id="book-genre" placeholder="Genre">
+                        <input type="number" id="book-year" placeholder="Year">
+                    </div>
+                    <button type="submit" class="btn-primary">Add Book</button>
+                </form>
+                <div class="list-container" id="books-list">
+                    <!-- Books populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
