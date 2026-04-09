@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:5001/api
+
+### Create a Task
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Learn Mongoose CRUD",
+    "description": "Implement Create, Read, Update, and Delete operations using Mongoose and Express."
+}
+
+### Get All Tasks
+GET {{baseUrl}}/tasks
+
+### Get Single Task (Replace ID)
+GET {{baseUrl}}/tasks/<TASK_ID>
+
+### Update a Task (Replace ID)
+PUT {{baseUrl}}/tasks/<TASK_ID>
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Delete a Task (Replace ID)
+DELETE {{baseUrl}}/tasks/<TASK_ID>
